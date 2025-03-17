@@ -64,7 +64,6 @@ export class AppointmentService {
       if (error instanceof ConflictException) {
         throw error;
       }
-      console.error('Error booking appointment:', error);
       throw new InternalServerErrorException(
         'Failed to book appointment. Please try again.',
       );
